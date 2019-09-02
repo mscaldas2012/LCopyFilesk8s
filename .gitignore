@@ -1,0 +1,9 @@
+venv
+target
+bin
+lib
+packages
+include
+.DS_Store
+.idea
+
