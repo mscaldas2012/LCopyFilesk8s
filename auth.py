@@ -54,7 +54,5 @@ class EKSAuth(object):
         )
 
         base64_enc = base64.urlsafe_b64encode(signed_url.encode('utf-8')).decode('utf-8')
-        #print("url encoded: " + base64_enc)
         newbase64_nopadding = re.sub(r'=*', '', base64_enc)
-        print("ulr not padded: " + newbase64_nopadding)
         return self.EKS_PREFIX + newbase64_nopadding

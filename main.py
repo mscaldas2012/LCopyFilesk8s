@@ -66,10 +66,8 @@ def interactWK8s():
     eks = EKSAuth(CLUSTER_NAME)
     token = eks.get_token()
     # Configure
-    print("############")
     file_o = open(KUBE_FILEPATH)
     content = file_o.read()
-    print(content)
     file_o.close()
     config.load_kube_config(KUBE_FILEPATH)
     configuration = client.Configuration()
